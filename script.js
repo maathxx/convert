@@ -65,3 +65,11 @@ function convertCurrency(amount, price, symbol) {
         alert("Não foi possivel converter, tente novamente mais tarde.")
     }
 }
+
+function formatCurrencyBRL(value) {
+    // Converte para número para utilizar o toLocalString para formatar o valor para o formato de moeda brasileira (BRL).
+    return Number(value).toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
+}

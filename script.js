@@ -34,3 +34,34 @@ form.addEventListener("submit", (event) => {
             break
     }
 })
+
+// Função para converter a moeda.
+function convertCurrency(amount, price, symbol) {
+    try {
+        // Exibindo a cotação da moeda selecionada
+        description.textContent = `${symbol} 1 = ${formatCurrencyBRL(price)}`
+
+        // Calcula o total.
+        let total = amount * price
+
+        // Verifica se o resultado não é um número.
+        if(isNaN(total)) {
+            return alert("Por favor, digite o valor corretamente para converter")
+        }
+
+        // Formatar o valor total.
+        total = formatCurrencyBRL(total).replace("R$", "")
+
+        // Exibe o resultado total.
+        result.textContent = `${total} Reais`
+
+        // Aplica a classe que exibe o footer para mostrar o resultado.
+        footer.classList.add("show-result")
+    } catch (error) {
+        // Remove a classe do footer ocultando ele.
+        footer.classList.remove("show-result")
+
+        console.log(error)
+        alert("Não foi possivel converter, tente novamente mais tarde.")
+    }
+}

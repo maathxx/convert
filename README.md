@@ -12,17 +12,9 @@ Aplicação web simples que permite converter valores entre diferentes moedas, p
 - CSS3
 - JavaScript
 
-## 💻 Como executar
+## 🔗 Acesse o projeto
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/maathxx/convert.git
-   ```
-2. Acesse a pasta do projeto:
-   ```bash
-   cd convert
-   ```
-3. Abra o arquivo `index.html` no navegador.
+https://maathxx.github.io/convert/
 
 ## 👨🏽‍💻 Autor
 
